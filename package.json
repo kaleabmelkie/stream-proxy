@@ -1,0 +1,37 @@
+{
+  "name": "stream-proxy",
+  "version": "1.0.0",
+  "description": "Proxy server for HTTP stream requests.",
+  "main": "dist/index.js",
+  "type": "dist/index.d.ts",
+  "author": {
+    "email": "kaleabmelkie@gmail.com",
+    "name": "Kaleab S. Melkie",
+    "url": "https://bit.ly/kaleab"
+  },
+  "license": "MIT",
+  "private": false,
+  "dependencies": {
+    "express": "^4.17.1",
+    "file-type": "^13.1.2",
+    "request": "^2.88.0"
+  },
+  "devDependencies": {
+    "@types/express": "^4.17.2",
+    "@types/request": "^2.48.4",
+    "del-cli": "^3.0.0",
+    "prettier": "^1.19.1",
+    "typescript": "^3.7.5"
+  },
+  "scripts": {
+    "build": "tsc",
+    "clean": "del-cli dist *.tsbuildinfo",
+    "format": "prettier --write ./{*,src/**/*}.{ts,tsx,js,jsx,json,md}",
+    "start": "node ."
+  },
+  "prettier": {
+    "endOfLine": "lf",
+    "semi": false,
+    "singleQuote": true
+  }
+}
